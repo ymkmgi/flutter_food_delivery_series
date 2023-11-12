@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../blocs/blocs.dart';
 import '../../blocs/voucher/voucher_bloc.dart';
-import '../../models/models.dart';
 import '../../repositories/voucher/voucher_repository.dart';
 
 class VoucherScreen extends StatelessWidget {
@@ -30,9 +29,8 @@ class VoucherScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  padding: const EdgeInsets.symmetric(horizontal: 50), backgroundColor: Theme.of(context).colorScheme.secondary,
                   shape: RoundedRectangleBorder(),
-                  primary: Theme.of(context).colorScheme.secondary,
                 ),
                 child: Text('Apply'),
                 onPressed: () {},
@@ -48,7 +46,7 @@ class VoucherScreen extends StatelessWidget {
           children: [
             Text(
               'Enter a Voucher Code',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.secondary,
                   ),
             ),
@@ -78,7 +76,7 @@ class VoucherScreen extends StatelessWidget {
             ),
             Text(
               'Your Vouchers',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.secondary,
                   ),
             ),
@@ -112,7 +110,7 @@ class VoucherScreen extends StatelessWidget {
                               '3x',
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline5!
+                                  .headlineSmall!
                                   .copyWith(
                                       color: Theme.of(context)
                                           .colorScheme
@@ -125,7 +123,7 @@ class VoucherScreen extends StatelessWidget {
                               child: Text(
                                 state.vouchers[index].code,
                                 textAlign: TextAlign.left,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.titleLarge,
                               ),
                             ),
                             TextButton(

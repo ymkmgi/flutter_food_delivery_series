@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../blocs/filter/filter_bloc.dart';
-import '../models/category_filter_model.dart';
 
 class CustomCategoryFilter extends StatelessWidget {
   const CustomCategoryFilter({
@@ -37,7 +36,7 @@ class CustomCategoryFilter extends StatelessWidget {
                   children: [
                     Text(
                       state.filter.categoryFilters[index].category.name,
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     SizedBox(
                       height: 25,

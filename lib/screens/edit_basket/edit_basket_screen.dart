@@ -23,9 +23,8 @@ class EditBasketScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  padding: const EdgeInsets.symmetric(horizontal: 50), backgroundColor: Theme.of(context).colorScheme.primary,
                   shape: RoundedRectangleBorder(),
-                  primary: Theme.of(context).colorScheme.primary,
                 ),
                 child: Text('Done'),
                 onPressed: () {
@@ -43,7 +42,7 @@ class EditBasketScreen extends StatelessWidget {
           children: [
             Text(
               'Items',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.primary,
                   ),
             ),
@@ -72,7 +71,7 @@ class EditBasketScreen extends StatelessWidget {
                               Text(
                                 'No Items in the Basket',
                                 textAlign: TextAlign.left,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.titleLarge,
                               ),
                             ],
                           ),
@@ -103,7 +102,7 @@ class EditBasketScreen extends StatelessWidget {
                                     '${state.basket.itemQuantity(state.basket.products).entries.elementAt(index).value}x',
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline5!
+                                        .headlineSmall!
                                         .copyWith(
                                           color: Theme.of(context)
                                               .colorScheme
@@ -118,7 +117,7 @@ class EditBasketScreen extends StatelessWidget {
                                       '${state.basket.itemQuantity(state.basket.products).keys.elementAt(index).name}',
                                       textAlign: TextAlign.left,
                                       style:
-                                          Theme.of(context).textTheme.headline6,
+                                          Theme.of(context).textTheme.titleLarge,
                                     ),
                                   ),
                                   IconButton(

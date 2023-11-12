@@ -1,12 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
-import 'menu_item_model.dart';
 
 import 'category_model.dart';
 import 'opening_hours_model.dart';
 import 'product_model.dart';
 
-import 'menu_item_model.dart';
 
 class Restaurant extends Equatable {
   final String id;

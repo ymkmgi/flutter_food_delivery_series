@@ -5,9 +5,7 @@ ThemeData theme() {
     scaffoldBackgroundColor: Color(0xFFF5F5F5),
     colorScheme: ColorScheme(
       primary: Color(0xFFFE3C5B),
-      primaryVariant: Color(0xFFFE3C5B),
       secondary: Color(0xFFe84545),
-      secondaryVariant: Color(0xFFe84545),
       background: Color(0xFFFFFFFF),
       surface: Color(0xFFFFFFFF),
       error: Color(0x000000),
@@ -20,42 +18,42 @@ ThemeData theme() {
     ),
     fontFamily: 'Futura',
     textTheme: TextTheme(
-      headline1: TextStyle(
+      displayLarge: TextStyle(
         color: Color(0xFF2b2e4a),
         fontWeight: FontWeight.bold,
         fontSize: 36,
       ),
-      headline2: TextStyle(
+      displayMedium: TextStyle(
         color: Color(0xFF2b2e4a),
         fontWeight: FontWeight.bold,
         fontSize: 24,
       ),
-      headline3: TextStyle(
+      displaySmall: TextStyle(
         color: Color(0xFF2b2e4a),
         fontWeight: FontWeight.bold,
         fontSize: 18,
       ),
-      headline4: TextStyle(
+      headlineMedium: TextStyle(
         color: Color(0xFF2b2e4a),
         fontWeight: FontWeight.bold,
         fontSize: 16,
       ),
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
         color: Color(0xFF2b2e4a),
         fontWeight: FontWeight.bold,
         fontSize: 14,
       ),
-      headline6: TextStyle(
+      titleLarge: TextStyle(
         color: Color(0xFF2b2e4a),
         fontWeight: FontWeight.normal,
         fontSize: 14,
       ),
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
         color: Color(0xFF2b2e4a),
         fontWeight: FontWeight.normal,
         fontSize: 12,
       ),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
         color: Color(0xFF2b2e4a),
         fontWeight: FontWeight.normal,
         fontSize: 10,

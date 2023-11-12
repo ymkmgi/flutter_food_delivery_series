@@ -37,7 +37,7 @@ class CustomCategoryFilter extends StatelessWidget {
                   children: [
                     Text(
                       state.filter.categoryFilters[index].category.name,
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     SizedBox(
                       height: 25,
@@ -45,7 +45,7 @@ class CustomCategoryFilter extends StatelessWidget {
                           value: state.filter.categoryFilters[index].value,
                           onChanged: (bool? newValue) {
                             context.read<FilterBloc>().add(
-                                  CategoryFilterUpdated(
+                                  UpdateCategoryFilter(
                                     categoryFilter: state
                                         .filter.categoryFilters[index]
                                         .copyWith(

@@ -52,7 +52,7 @@ class CustomPriceFilter extends StatelessWidget {
                       ),
                       child: Text(
                         '${state.filter.priceFilters[price.key].price.price}',
-                        style: Theme.of(context).textTheme.headline5,
+                        style: Theme.of(context).textTheme.headlineSmall,
                       ),
                     ),
                   ),

@@ -52,7 +52,7 @@ class RestaurantCard extends StatelessWidget {
                     alignment: Alignment.center,
                     child: Text(
                       '${restaurant.deliveryTime} min',
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
                 ),
@@ -68,13 +68,13 @@ class RestaurantCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(restaurant.name,
-                        style: Theme.of(context).textTheme.headline5),
+                        style: Theme.of(context).textTheme.headlineSmall),
                     SizedBox(height: 5),
                     RestaurantTags(restaurant: restaurant),
                     SizedBox(height: 5),
                     Text(
                       '${restaurant.distance}km away - \$${restaurant.deliveryFee} delivery fee',
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                     SizedBox(height: 5),
                   ],

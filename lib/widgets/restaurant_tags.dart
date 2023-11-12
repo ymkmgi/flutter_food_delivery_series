@@ -18,11 +18,11 @@ class RestaurantTags extends StatelessWidget {
             (tag) => restaurant.tags.indexOf(tag) == restaurant.tags.length - 1
                 ? Text(
                     tag,
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   )
                 : Text(
                     '$tag, ',
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
           )
           .toList(),

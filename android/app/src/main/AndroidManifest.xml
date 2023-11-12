@@ -6,8 +6,8 @@
 
 
         <!-- TODO: Add your API key here -->
-        <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="YOUR-KEY-HERE"/>
+        <meta-data android:name="com.google.android.geo.AIzaSyA0qAs-FFkcnSUU6-qbM-3TPbXb7WoXNDE"
+               android:value="AIzaSyA0qAs-FFkcnSUU6-qbM-3TPbXb7WoXNDE"/>
 
         <activity
             android:name=".MainActivity"
