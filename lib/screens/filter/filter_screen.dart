@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../blocs/filter/filter_bloc.dart';
-import '../../models/category_filter_model.dart';
 import '../../models/models.dart';
-import '../../models/price_filter_model.dart';
-import '../../models/price_model.dart';
 import '../../widgets/widgets.dart';
 
 class FilterScreen extends StatelessWidget {
@@ -36,9 +33,8 @@ class FilterScreen extends StatelessWidget {
                 if (state is FilterLoaded) {
                   return ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      padding: const EdgeInsets.symmetric(horizontal: 50), backgroundColor: Theme.of(context).colorScheme.secondary,
                       shape: RoundedRectangleBorder(),
-                      primary: Theme.of(context).colorScheme.secondary,
                     ),
                     child: Text('Apply'),
                     onPressed: () {
@@ -88,14 +84,14 @@ class FilterScreen extends StatelessWidget {
           children: [
             Text(
               'Price',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.secondary,
                   ),
             ),
             CustomPriceFilter(),
             Text(
               'Category',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.secondary,
                   ),
             ),

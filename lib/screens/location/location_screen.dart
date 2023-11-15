@@ -115,7 +115,7 @@ class Location extends StatelessWidget {
                                   state.autocomplete[index].description,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline6!
+                                      .titleLarge!
                                       .copyWith(
                                         color: Colors.white,
                                       ),
@@ -162,7 +162,7 @@ class SaveButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 70.0),
         child: ElevatedButton(
           style:
-              ElevatedButton.styleFrom(primary: Theme.of(context).primaryColor),
+              ElevatedButton.styleFrom(backgroundColor: Theme.of(context).primaryColor),
           child: Text('Save'),
           onPressed: () {
             Navigator.pushNamed(context, '/');

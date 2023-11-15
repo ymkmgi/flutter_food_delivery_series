@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../screens/screens.dart';
 
 import '../models/models.dart';
-import '../screens/screens.dart';
 
 class AppRouter {
   static Route onGenerateRoute(RouteSettings settings) {

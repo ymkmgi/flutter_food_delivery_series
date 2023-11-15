@@ -42,14 +42,14 @@ class PromoBox extends StatelessWidget {
                 children: [
                   Text(
                     promo.title,
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           color: Colors.white,
                         ),
                   ),
                   SizedBox(height: 15),
                   Text(
                     promo.description,
-                    style: Theme.of(context).textTheme.headline6!.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
                           color: Colors.white,
                         ),
                   ),

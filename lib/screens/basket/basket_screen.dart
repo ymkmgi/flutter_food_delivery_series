@@ -33,9 +33,8 @@ class BasketScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  padding: const EdgeInsets.symmetric(horizontal: 50), backgroundColor: Theme.of(context).colorScheme.secondary,
                   shape: RoundedRectangleBorder(),
-                  primary: Theme.of(context).colorScheme.secondary,
                 ),
                 child: Text('Apply'),
                 onPressed: () {},
@@ -51,7 +50,7 @@ class BasketScreen extends StatelessWidget {
           children: [
             Text(
               'Cutlery',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.secondary,
                   ),
             ),
@@ -71,7 +70,7 @@ class BasketScreen extends StatelessWidget {
                     child: Text(
                       'Do you need cutlery?',
                       textAlign: TextAlign.left,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
                   BlocBuilder<BasketBloc, BasketState>(
@@ -105,7 +104,7 @@ class BasketScreen extends StatelessWidget {
             ),
             Text(
               'Items',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.secondary,
                   ),
             ),
@@ -134,7 +133,7 @@ class BasketScreen extends StatelessWidget {
                               Text(
                                 'No Items in the Basket',
                                 textAlign: TextAlign.left,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.titleLarge,
                               ),
                             ],
                           ),
@@ -165,7 +164,7 @@ class BasketScreen extends StatelessWidget {
                                     '${state.basket.itemQuantity(state.basket.items).entries.elementAt(index).value}x',
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline5!
+                                        .headlineSmall!
                                         .copyWith(
                                           color: Theme.of(context)
                                               .colorScheme
@@ -180,13 +179,13 @@ class BasketScreen extends StatelessWidget {
                                       '${state.basket.itemQuantity(state.basket.items).keys.elementAt(index).name}',
                                       textAlign: TextAlign.left,
                                       style:
-                                          Theme.of(context).textTheme.headline6,
+                                          Theme.of(context).textTheme.titleLarge,
                                     ),
                                   ),
                                   Text(
                                     '\$${state.basket.itemQuantity(state.basket.items).keys.elementAt(index).price}',
                                     style:
-                                        Theme.of(context).textTheme.headline6,
+                                        Theme.of(context).textTheme.titleLarge,
                                   ),
                                 ],
                               ),
@@ -223,7 +222,7 @@ class BasketScreen extends StatelessWidget {
                                   Text(
                                     'Delivery in 20 minutes',
                                     style:
-                                        Theme.of(context).textTheme.headline6,
+                                        Theme.of(context).textTheme.titleLarge,
                                   ),
                                   TextButton(
                                     onPressed: () {
@@ -234,7 +233,7 @@ class BasketScreen extends StatelessWidget {
                                       'Change',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .headline6!
+                                          .titleLarge!
                                           .copyWith(
                                               color: Theme.of(context)
                                                   .colorScheme
@@ -245,7 +244,7 @@ class BasketScreen extends StatelessWidget {
                               )
                             : Text(
                                 'Delivery at ${state.basket.deliveryTime!.value}',
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.titleLarge,
                               );
                       } else {
                         return Text('Something went wrong');
@@ -279,7 +278,7 @@ class BasketScreen extends StatelessWidget {
                                   Text(
                                     'Do you have a voucher?',
                                     style:
-                                        Theme.of(context).textTheme.headline6,
+                                        Theme.of(context).textTheme.titleLarge,
                                   ),
                                   TextButton(
                                     onPressed: () {
@@ -289,7 +288,7 @@ class BasketScreen extends StatelessWidget {
                                       'Apply',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .headline6!
+                                          .titleLarge!
                                           .copyWith(
                                               color: Theme.of(context)
                                                   .colorScheme
@@ -300,7 +299,7 @@ class BasketScreen extends StatelessWidget {
                               )
                             : Text(
                                 'Your voucher is applied!',
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.titleLarge,
                               );
                       } else {
                         return Text('Something went wrong');
@@ -336,11 +335,11 @@ class BasketScreen extends StatelessWidget {
                           children: [
                             Text(
                               'Subtotal',
-                              style: Theme.of(context).textTheme.headline6,
+                              style: Theme.of(context).textTheme.titleLarge,
                             ),
                             Text(
                               '\$${state.basket.subtotalString}',
-                              style: Theme.of(context).textTheme.headline6,
+                              style: Theme.of(context).textTheme.titleLarge,
                             ),
                           ],
                         ),
@@ -350,11 +349,11 @@ class BasketScreen extends StatelessWidget {
                           children: [
                             Text(
                               'Delivery Fee',
-                              style: Theme.of(context).textTheme.headline6,
+                              style: Theme.of(context).textTheme.titleLarge,
                             ),
                             Text(
                               '\$5.00',
-                              style: Theme.of(context).textTheme.headline6,
+                              style: Theme.of(context).textTheme.titleLarge,
                             ),
                           ],
                         ),
@@ -366,7 +365,7 @@ class BasketScreen extends StatelessWidget {
                               'Total',
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline5!
+                                  .headlineSmall!
                                   .copyWith(
                                       color: Theme.of(context)
                                           .colorScheme
@@ -376,7 +375,7 @@ class BasketScreen extends StatelessWidget {
                               '\$${state.basket.totalString}',
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline5!
+                                  .headlineSmall!
                                   .copyWith(
                                       color: Theme.of(context)
                                           .colorScheme

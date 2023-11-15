@@ -26,9 +26,8 @@ class DeliveryTimeScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  padding: const EdgeInsets.symmetric(horizontal: 50), backgroundColor: Theme.of(context).colorScheme.secondary,
                   shape: RoundedRectangleBorder(),
-                  primary: Theme.of(context).colorScheme.secondary,
                 ),
                 child: Text('Select'),
                 onPressed: () {
@@ -46,7 +45,7 @@ class DeliveryTimeScreen extends StatelessWidget {
           children: [
             Text(
               'Choose a Date',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.secondary,
                   ),
             ),
@@ -83,7 +82,7 @@ class DeliveryTimeScreen extends StatelessWidget {
             ),
             Text(
               'Choose the Time',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     color: Theme.of(context).colorScheme.secondary,
                   ),
             ),
@@ -109,7 +108,7 @@ class DeliveryTimeScreen extends StatelessWidget {
                               },
                               child: Text(
                                 '${DeliveryTime.deliveryTimes[index].value}',
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.titleLarge,
                               ),
                             ),
                           ),

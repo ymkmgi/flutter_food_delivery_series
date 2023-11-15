@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import '../voucher/voucher_bloc.dart';
-import '../../models/menu_item_model.dart';
 import '../../models/models.dart';
 
 part 'basket_event.dart';

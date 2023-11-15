@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_food_delivery_app/firebase_options.dart';
 
 import 'blocs/blocs.dart';
 import 'config/app_router.dart';
@@ -9,15 +10,10 @@ import 'repositories/repositories.dart';
 import 'screens/screens.dart';
 import 'simple_bloc_observer.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  BlocOverrides.runZoned(
-    () {
-      runApp(MyApp());
-    },
-    blocObserver: SimpleBlocObserver(),
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: Text(
                   'Top Rated',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
             ),
@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     Key? key,
   }) : super(key: key);
@@ -98,13 +98,13 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         children: [
           Text(
             'CURRENT LOCATION',
-            style: Theme.of(context).textTheme.bodyText1!.copyWith(
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                   color: Colors.white,
                 ),
           ),
           Text(
             'Singapore, 1 Shenton Way',
-            style: Theme.of(context).textTheme.headline6!.copyWith(
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: Colors.white,
                 ),
           ),
