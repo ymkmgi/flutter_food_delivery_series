@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_food_delivery_app/firebase_options.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
 
 import 'blocs/blocs.dart';
 import '/models/models.dart';
@@ -15,16 +15,11 @@ import 'simple_bloc_observer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await Hive.initFlutter();
   Hive.registerAdapter(PlaceAdapter());
 
-  BlocOverrides.runZoned(
-    () {
-      runApp(MyApp());
-    },
-    blocObserver: SimpleBlocObserver(),
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

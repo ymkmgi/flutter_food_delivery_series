@@ -66,7 +66,7 @@ class CategoryBox extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Text(
                   category.name,
-                  style: Theme.of(context).textTheme.headline5!.copyWith(
+                  style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: Colors.white,
                       ),
                 ),

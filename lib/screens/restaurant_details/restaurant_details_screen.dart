@@ -4,8 +4,6 @@ import '../../blocs/basket/basket_bloc.dart';
 import '../../models/models.dart';
 import '../../widgets/widgets.dart';
 
-import '../../models/models.dart';
-import '../../widgets/widgets.dart';
 
 class RestaurantDetailsScreen extends StatelessWidget {
   static const String routeName = '/restaurant-details';
@@ -36,9 +34,8 @@ class RestaurantDetailsScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 50),
+                padding: const EdgeInsets.symmetric(horizontal: 50), backgroundColor: Theme.of(context).colorScheme.secondary,
                 shape: RoundedRectangleBorder(),
-                primary: Theme.of(context).colorScheme.secondary,
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/basket');
@@ -99,7 +96,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
           ),
           child: Text(
             restaurant.categories[index].name,
-            style: Theme.of(context).textTheme.headline3!.copyWith(
+            style: Theme.of(context).textTheme.displaySmall!.copyWith(
                   color: Theme.of(context).colorScheme.secondary,
                 ),
           ),
@@ -120,11 +117,11 @@ class RestaurantDetailsScreen extends StatelessWidget {
                         contentPadding: EdgeInsets.zero,
                         title: Text(
                           product.name,
-                          style: Theme.of(context).textTheme.headline5,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         subtitle: Text(
                           product.description,
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                         trailing: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -132,7 +129,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
                           children: [
                             Text(
                               '\$${product.price}',
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             BlocBuilder<BasketBloc, BasketState>(
                               builder: (context, state) {

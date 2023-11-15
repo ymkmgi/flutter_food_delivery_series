@@ -21,8 +21,8 @@ class RestaurantInformation extends StatelessWidget {
         children: [
           Text(
             restaurant.name,
-            style: Theme.of(context).textTheme.headline3!.copyWith(
-                  color: Theme.of(context).accentColor,
+            style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
           ),
           SizedBox(height: 10),
@@ -30,17 +30,17 @@ class RestaurantInformation extends StatelessWidget {
           SizedBox(height: 5),
           Text(
             '${restaurant.distance}km away - \$${restaurant.deliveryFee} delivery fee',
-            style: Theme.of(context).textTheme.bodyText1,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(height: 10),
           Text(
             'Restaurant Information',
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           SizedBox(height: 5),
           Text(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-            style: Theme.of(context).textTheme.bodyText1,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ],
       ),

@@ -86,7 +86,7 @@ class LocationScreen extends StatelessWidget {
                       Spacer(),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Theme.of(context).colorScheme.primary,
+                          backgroundColor: Theme.of(context).colorScheme.primary,
                           fixedSize: Size(200, 40),
                         ),
                         child: Text('Save'),
@@ -134,7 +134,7 @@ class _SearchBoxSuggestions extends StatelessWidget {
                     state.autocomplete[index].description,
                     style: Theme.of(context)
                         .textTheme
-                        .headline6!
+                        .titleLarge!
                         .copyWith(color: Colors.white),
                   ),
                   onTap: () {

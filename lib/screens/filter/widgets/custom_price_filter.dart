@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_food_delivery_app/blocs/filter/filter_bloc.dart';
-import 'package:flutter_food_delivery_app/models/models.dart';
+import 'package:flutter_food_delivery_app/models/price_model.dart';
 
 class CustomPriceFilter extends StatelessWidget {
   final List<Price> prices;
@@ -32,7 +32,7 @@ class CustomPriceFilter extends StatelessWidget {
 
                       print(state.filter.priceFilters);
                       context.read<FilterBloc>().add(
-                            PriceFilterUpdated(
+                            UpdatePriceFilter(
                               priceFilter: state.filter.priceFilters[price.key]
                                   .copyWith(
                                       value: !state.filter
@@ -57,7 +57,7 @@ class CustomPriceFilter extends StatelessWidget {
                       ),
                       child: Text(
                         state.filter.priceFilters[price.key].price.price,
-                        style: Theme.of(context).textTheme.headline5,
+                        style: Theme.of(context).textTheme.headlineSmall,
                       ),
                     ),
                   ),

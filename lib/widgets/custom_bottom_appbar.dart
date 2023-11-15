@@ -17,7 +17,7 @@ class CustomBottomAppBar extends StatelessWidget {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Theme.of(context).accentColor,
+                backgroundColor: Theme.of(context).colorScheme.secondary,
                 shape: RoundedRectangleBorder(),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 50,
@@ -26,7 +26,7 @@ class CustomBottomAppBar extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 text,
-                style: Theme.of(context).textTheme.headline4!.copyWith(
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       color: Colors.white,
                     ),
               ),

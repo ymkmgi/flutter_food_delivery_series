@@ -18,6 +18,7 @@ class LocalStorageRepository extends BaseLocalStorageRepository {
     if (box.values.length > 0) {
       return box.values.first as Place;
     }
+    return null;
   }
 
   @override
